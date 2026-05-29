@@ -1,0 +1,52 @@
+{
+  "buildCommand": "vite build",
+  "outputDirectory": "dist",
+  "framework": "vite",
+  "rewrites": [
+    { "source": "/api/auth/login", "destination": "/api/auth/login" },
+    { "source": "/api/auth/register", "destination": "/api/auth/register" },
+    { "source": "/api/auth/me", "destination": "/api/auth/me" },
+    { "source": "/api/auth/toggle-role", "destination": "/api/auth/toggle-role" },
+    { "source": "/api/numbers/countries", "destination": "/api/numbers/countries" },
+    { "source": "/api/numbers/services", "destination": "/api/numbers/services" },
+    { "source": "/api/numbers/purchase", "destination": "/api/numbers/purchase" },
+    { "source": "/api/numbers/history", "destination": "/api/numbers/history" },
+    { "source": "/api/numbers/cancel", "destination": "/api/numbers/cancel" },
+    { "source": "/api/numbers/code-again", "destination": "/api/numbers/code-again" },
+    { "source": "/api/numbers/rent", "destination": "/api/numbers/rent" },
+    { "source": "/api/numbers/simulate-sms", "destination": "/api/numbers/simulate-sms" },
+    { "source": "/api/wallet/fund", "destination": "/api/wallet/fund" },
+    { "source": "/api/affiliate/stats", "destination": "/api/affiliate/stats" },
+    { "source": "/api/affiliate/withdraw", "destination": "/api/affiliate/withdraw" },
+    { "source": "/api/admin/dashboard", "destination": "/api/admin/dashboard" },
+    { "source": "/api/admin/users", "destination": "/api/admin/users" },
+    { "source": "/api/admin/promos", "destination": "/api/admin/promos" },
+    { "source": "/api/admin/config", "destination": "/api/admin/config" },
+    { "source": "/api/admin/config/update", "destination": "/api/admin/config/update" },
+    { "source": "/api/admin/withdrawals", "destination": "/api/admin/withdrawals" },
+    { "source": "/api/admin/withdrawals/process", "destination": "/api/admin/withdrawals/process" },
+    { "source": "/api/admin/users/wallet-adjust", "destination": "/api/admin/users/wallet-adjust" },
+    { "source": "/api/admin/users/toggle-status", "destination": "/api/admin/users/toggle-status" },
+    { "source": "/api/admin/promos/create", "destination": "/api/admin/promos/create" },
+    { "source": "/api/admin/countries", "destination": "/api/admin/countries" },
+    { "source": "/api/admin/countries/update", "destination": "/api/admin/countries/update" },
+    { "source": "/api/admin/countries/add", "destination": "/api/admin/countries/add" },
+    { "source": "/api/admin/services", "destination": "/api/admin/services" },
+    { "source": "/api/admin/services/update", "destination": "/api/admin/services/update" },
+    { "source": "/api/admin/services/add", "destination": "/api/admin/services/add" },
+    { "source": "/api/admin/providers/toggle", "destination": "/api/admin/providers/toggle" },
+    { "source": "/api/webhooks/flutterwave", "destination": "/api/webhooks/flutterwave" },
+    { "source": "/api/webhooks/nowpayments", "destination": "/api/webhooks/nowpayments" },
+    { "source": "/(.*)", "destination": "/index.html" }
+  ],
+  "headers": [
+    {
+      "source": "/api/(.*)",
+      "headers": [
+        { "key": "Access-Control-Allow-Origin", "value": "*" },
+        { "key": "Access-Control-Allow-Methods", "value": "GET,POST,PUT,DELETE,OPTIONS" },
+        { "key": "Access-Control-Allow-Headers", "value": "Content-Type,Authorization" }
+      ]
+    }
+  ]
+}
